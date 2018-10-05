@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { PollyService } from '../polly.service';
+import { PollyService } from '../polly.service';
+import { Subscriber } from 'rxjs';
 
 export interface Voice {
   voicekey: string;
@@ -13,7 +14,10 @@ export interface Voice {
 export class PollyDemoComponent implements OnInit {
   public voices: Voice[];
   private inputdata: any;
-  constructor() { }
+  public postId: string;
+  public message: string;
+  public posts = [];
+  constructor(private _pollyService: PollyService) { }
 
   ngOnInit() {
     this.voices = [
@@ -41,9 +45,16 @@ export class PollyDemoComponent implements OnInit {
       voice: value,
       text : postText
     };
+    console.log(value);
+    this._pollyService.postData(this.inputdata)
+      .subscribe(data => this.postId = data);
+      if (this.postId !== '') {
+        this.message = 'Success!';
+      }
   }
-  submit(postId) {
-
+  search(postId) {
+    this._pollyService.getData(postId)
+      .subscribe(data => this.posts = data);
   }
 
 }

@@ -1,43 +1,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div>
         <label>Select Voice: 
-            <select placeholder="Voice">
+            <select placeholder="Voice" #voicekey>
                 <option>None</option>
                 <option *ngFor="let voice of voices" [value]="voice.voicekey">{{voice.voice}}</option>
               </select>
             </label>
         <span id="postIDreturned"></span>
-        <button mat-flat-button color="primary" onclick="save(value, postText)">Say it!</button>      
+        <button mat-flat-button color="primary" (click)="save(voicekey.value, postText.value)">Say it!</button>  
+        <label>{{ message }}</label>    
 </div>
 
 <div>
-<textarea matInput placeholder="Enter Text" ng-model="postText"></textarea>
+<textarea matInput placeholder="Enter Text" #postText></textarea>
 </div>
 
 <div>
-    <!-- <span id="charCounter">Characters: 0</span> -->
-<input matInput placeholder="Enter Post Id to Search" ng-model="postId"> 
-<button mat-button color="primary" onclick="search(postId)" id="searchButton"><i class="fa fa-fw fa-search"></i></button> 
+<input matInput placeholder="Enter Post Id to Search" #postId> 
+<button mat-button color="primary" (click)="search(postId.value)" id="searchButton"><i class="fa fa-fw fa-search"></i></button> 
 </div>
-<!-- <div> -->
 <!--Table-->
-<app-table> </app-table>
-<!-- <table id="posts">
-    <colgroup>
-      <col style="width:10%">
-      <col style="width:7%">
-      <col style="width:45%">
-      <col style="width:8%">
-      <col style="width:30%">
-    </colgroup>
-    <tbody>
-      <tr>
-        <th>Post ID</th>
-        <th>Voice</th>
-        <th>Post</th>
-        <th>Status</th>
-        <th>Player</th>
-      </tr>
-    </tbody>
-  </table> -->
-<!-- </div> -->
+<app-table [posts]="posts"> </app-table>

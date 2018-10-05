@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { PollyService } from '../polly.service';
-// import { Observable } from 'rxjs';
-
+import { PollyDemoComponent } from '../polly-demo/polly-demo.component';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -9,14 +8,12 @@ import { PollyService } from '../polly.service';
 })
 export class TableComponent implements OnInit {
   public columns: string[];
-  public posts = [];
-  constructor(private _pollyService: PollyService) { }
+  @Input() posts = [];
+  constructor(private _pollyService: PollyService, private _pollyDemo: PollyDemoComponent) { }
 
   ngOnInit() {
-    this._pollyService.getData()
-      .subscribe(data => this.posts = data);
-    this.columns = this._pollyService.getColumns();
+  //   this._pollyService.getData()
+  //     .subscribe(data => this.posts = data);
+  this.columns = this._pollyService.getColumns();
   }
-
-
 }
