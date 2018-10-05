@@ -11,9 +11,8 @@ export interface Voice {
   styleUrls: ['./polly-demo.component.css']
 })
 export class PollyDemoComponent implements OnInit {
-  private voices: Voice[];
+  public voices: Voice[];
   private inputdata: any;
-  // private API_ENDPOINT = 'https://oi3ez5i7m2.execute-api.us-east-1.amazonaws.com/prod';
   constructor() { }
 
   ngOnInit() {
