@@ -16,8 +16,8 @@
 
 <div>
     <!-- <span id="charCounter">Characters: 0</span> -->
-<input matInput placeholder="Enter Post Id to Search" id="postId"> 
-<button mat-button color="primary" id="searchButton"><i class="fa fa-fw fa-search"></i></button> 
+<input matInput placeholder="Enter Post Id to Search" ng-model="postId"> 
+<button mat-button color="primary" onclick="search(postId)" id="searchButton"><i class="fa fa-fw fa-search"></i></button> 
 </div>
 <!-- <div> -->
 <!--Table-->

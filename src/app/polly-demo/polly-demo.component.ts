@@ -43,5 +43,8 @@ export class PollyDemoComponent implements OnInit {
       text : postText
     };
   }
+  submit(postId) {
+
+  }
 
 }

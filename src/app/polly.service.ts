@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
-// import { Observable } from 'rxjs';
-// import 'rxjs/add/observable/of';
-// import 'rxjs/add/operator/delay';
-import { CHARACTERS } from './mock-data';
+import { HttpClient } from '@angular/common/http';
+import { IPolly } from './polly';
+import { Observable } from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class PollyService {
-
-  constructor() { }
-  // getCharacters(): Observable<any[]> {
-  //   return Observable.call(CHARACTERS).delay(100);
-  // }
+  private _url = 'https://oi3ez5i7m2.execute-api.us-east-1.amazonaws.com/prod?postId=*';
+  public res;
+  constructor(private http: HttpClient) { }
+  getData(): Observable<IPolly[]> {
+    this.res = this.http.get<IPolly[]>(this._url);
+    return this.res;
+  }
   getColumns(): string[] {
-    return ['name', 'age', 'species', 'occupation'];
+    return ['id', 'voice', 'text', 'status', 'url'];
   }
 }

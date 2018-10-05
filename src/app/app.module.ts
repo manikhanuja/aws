@@ -9,7 +9,8 @@ import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFor
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { TableComponent } from './table/table.component';
 import { TableRowComponent } from './table-row/table-row.component';
-// import { PollyService } from './polly.service';
+import { PollyService } from './polly.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,8 +34,9 @@ import { TableRowComponent } from './table-row/table-row.component';
     BrowserAnimationsModule,
     FlexLayoutModule,
     AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PollyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

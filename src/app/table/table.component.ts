@@ -8,14 +8,15 @@ import { PollyService } from '../polly.service';
   styleUrls: ['./table.component.css']
 })
 export class TableComponent implements OnInit {
-  // characters: Observable<any[]>;
-  columns: string[];
+  public columns: string[];
+  public posts = [];
   constructor(private _pollyService: PollyService) { }
 
   ngOnInit() {
+    this._pollyService.getData()
+      .subscribe(data => this.posts = data);
     this.columns = this._pollyService.getColumns();
-    // this.characters = this._pollyService.getCharacters();
-    console.log(this.columns);
   }
+
 
 }

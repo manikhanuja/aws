@@ -9,6 +9,12 @@ th, td {
     text-align: left;
     padding: 8px;
 }
+th {
+    font-size: 14px;
+}
+td{
+    font-size: 12px;
+}
 
 tr:nth-child(even){background-color: #f2f2f2}
 
