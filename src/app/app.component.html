@@ -1,0 +1,28 @@
+<body>
+<div style="text-align:left">
+  <ngx-avatar src="assets/mani.jpg" name="Mani Khanuja" size="10%" [round]="true"></ngx-avatar>
+</div>
+<h2>Here's what I've done so far</h2>
+
+<mat-card class="polly-card">
+  <mat-card-header>
+    <div mat-card-avatar class="polly-header-image"></div>
+    <mat-card-title> Text-to-Speech Conversion App</mat-card-title>
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="AWS Polly Service Example"> -->
+  <mat-card-content>
+    <p> Converts the text provided by user into audio which can be downloaded as mp3 file. <br>
+    <span> <i> Tech Stack:</i></span> API Gateway, Amazon Polly, S3 bucket, Lambda functions, DynamoDB & SNS service. </p>
+  </mat-card-content>
+  <mat-card-actions align="center">
+    <nav>
+      <a routerLink="/pollydemo">
+    <button mat-raised-button color="primary">Demo</button>
+  </a>
+  </nav>
+  </mat-card-actions>
+</mat-card>
+</body>
+<router-outlet></router-outlet>
+
+

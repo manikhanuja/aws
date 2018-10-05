@@ -1,0 +1,13 @@
+.polly-card {
+    max-width: 400px;
+    justify-content: center;
+  }
+  .polly-header-image {
+    background-image: url('/assets/polly.png');
+    background-size: cover;
+  }
+  body { font-family: "helvetica"; }
+  span {
+    /* color: #3b85ed;  */
+    color: primary;
+}
