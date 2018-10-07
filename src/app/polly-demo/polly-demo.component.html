@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 <div>
         <label>Select Voice: 
             <select placeholder="Voice" #voicekey>
@@ -19,5 +19,5 @@
 <input matInput placeholder="Enter Post Id to Search" #postId> 
 <button mat-button color="primary" (click)="search(postId.value)" id="searchButton"><i class="fa fa-fw fa-search"></i></button> 
 </div>
-<!--Table-->
+<!--Table--><!--[post] property is to pass posts from parent component to child component-->
 <app-table [posts]="posts"> </app-table>

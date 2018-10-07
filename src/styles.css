@@ -1,2 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+:root {
+    --blue: #1f81f1;
+    --white:#f5f6f7;
+    --darkblue: #474e5d;
+    --blackgrey: #2f2f2f;
+  }
+  button {
+    background: var(--white);
+  }
+  .card {
+    max-width: 90%;
+    height: 100%;
+    justify-content: center;
+    background-color: var(--darkblue);
+    color: var(--white);
+    font-size: 14px;
+    text-align: justify;
+  }
+  .polly-header-image {
+    background-image: url('/assets/polly.png');
+    background-size: cover;
+    color: var(--white);
+  }
+  .recognition-header-image {
+    background-image: url('/assets/rekognition.png');
+    background-size: cover;
+    color: var(--white);
+  }
+  .comingsoon-header-image {
+    background-image: url('/assets/coming-soon.png');
+    background-size: cover;
+    color: var(--white);
+  }
+  .card-content-height{
+      height: 63%;
+  }
+  .margin-right{
+      margin-right: 2%;
+  }
+  a{
+  margin-right:2%;
+  }
+  body {
+  font: 20px Montserrat, sans-serif;
+  line-height: 1.8;
+  }
+  p {
+  font-size: 16px;
+  color: var(--white);
+  text-justify: auto;
+  }
+ .margin {margin-bottom: 45px;}
+ .bg-1 { 
+  background-color:var(--blue);; /* blue */
+  color: var(--white);
+  }
+  .bg-2 { 
+  background-color:var(--darkblue); /* Dark Blue */
+  color:var(--white);
+  }
+.bg-3 { 
+  background-color:var(--white); /* White */
+  color: var(--darkblue);
+}
+.bg-4 { 
+  background-color: var(--blackgrey); /* Black Gray */
+  color:var(--white);
+}
+.container-fluid {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+.navbar-nav  li a:hover {
+  color: #1abc9c !important;
+}

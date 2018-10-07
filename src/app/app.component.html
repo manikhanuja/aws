@@ -1,32 +1,136 @@
+<html lang="en">
+<head>
+  <title>mktech.club</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
 <body>
-<div style="text-align:left">
-  <ngx-avatar src="assets/mani.jpg" name="Mani Khanuja" size="10%" [round]="true"></ngx-avatar>
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#"></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Projects</a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- First Container -->
+<div class=container>
+<div class="container-fluid bg-1">
+  <div class="row">
+          <div class="col-sm-4 text-center">
+              <img src="assets/mani.jpg" class="img-responsive img-circle margin" style="display:inline" alt="MK" width="200" height="200">
+          </div>
+    <div class="col-sm-8">
+        <h3 class="text-center">Mani Khanuja</h3>
+        <p class="margin-right"> I am a seasoned IT professional with over 13 years of software engineering experience.
+            Specialized in program development of large-scale, distributed software applications or services using object-oriented analysis and design throughout the complete software development lifecycle.
+            Interest areas include Amazon Web Services, Machine Learning and Designing Web Application in Serverless Architecture. 
+          </p>
+    </div>
+  </div>
+  </div>
+<!-- Third Container (Grid) -->
+<div class="container-fluid bg-3 text-center">    
+    <h3 class="margin">Here's what I've done so far!</h3><br>
+    <div class="row">
+      <div class="col-sm-4">
+        <mat-card class="card">
+            <mat-card-header>
+              <div mat-card-avatar class="polly-header-image"></div>
+              <mat-card-title text-right> Text-to-Speech Conversion App </mat-card-title>
+            </mat-card-header>
+            <!--future placeholder for adding image to the card-->
+            <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="AWS Polly Service Example"> -->
+            <mat-card-content class='card-content-height'>
+              <p class='card'> Converts the text provided by user into audio which can be downloaded as mp3 file. <br>
+              <span> <i> Tech Stack:</i></span> AngularJS, API Gateway, Amazon Polly, S3 bucket, Lambda functions, DynamoDB & SNS service. </p>
+            </mat-card-content>
+            <mat-card-actions align="center">
+              <nav>
+                <a routerLink="/pollydemo">
+                  <button >Demo</button>
+                </a>
+                <a href="#">
+                  <button >Reset</button>
+                </a>
+              </nav>
+            </mat-card-actions>
+          </mat-card>
+      </div>
+      <div class="col-sm-4"> 
+          <mat-card class="card">
+              <mat-card-header>
+                <div mat-card-avatar class="recognition-header-image" round="true"></div>
+                <mat-card-title text-right> Image Detection & Recognition </mat-card-title>
+              </mat-card-header>
+              <!--future placeholder for adding image to the card-->
+              <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="AWS Polly Service Example"> -->
+              <mat-card-content class='card-content-height'>
+                <p class="card"> Coming soon, watch this Space! <br>
+                <span> <i> Tech Stack:</i></span> AngularJS, API Gateway, Amazon Rekognition, S3 bucket, Lambda functions, DynamoDB & SNS service. </p>
+              </mat-card-content>
+              <mat-card-actions align="center">
+                <nav >
+                      <a routerLink="/">
+                          <button >Demo</button>
+                        </a>
+                        <a href="#">
+                          <button >Reset</button>
+                        </a>                  
+                </nav>
+              </mat-card-actions>
+            </mat-card>
+      </div>
+      <div class="col-sm-4"> 
+          <mat-card class="card">
+              <mat-card-header>
+                <div mat-card-avatar class="comingsoon-header-image"></div>
+                <mat-card-title text-right> Cool Stuff! </mat-card-title>
+              </mat-card-header>
+              <!--future placeholder for adding image to the card-->
+              <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="AWS Polly Service Example"> -->
+              <mat-card-content class='card-content-height'>
+                <p class='card'> Coming soon, watch this Space! <br>
+                <!-- <span> <i> Tech Stack:</i></span> AngularJS, API Gateway, Amazon Polly, S3 bucket, Lambda functions, DynamoDB & SNS service. </p> -->
+              </mat-card-content>
+              <mat-card-actions align="center">
+                <nav>
+                  <a routerLink="/">
+                    <button >Demo</button>
+                  </a>
+                  <a href="#">
+                    <button >Reset</button>
+                  </a>
+                </nav>
+              </mat-card-actions>
+            </mat-card>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  <!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+    <p>LinkedIn Profile <a href="https://www.linkedin.com/in/manikhanuja/">Mani Khanuja</a></p> 
+  </footer>
 </div>
-<h2>Here's what I've done so far</h2>
-
-<mat-card class="polly-card">
-  <mat-card-header>
-    <div mat-card-avatar class="polly-header-image"></div>
-    <mat-card-title> Text-to-Speech Conversion App</mat-card-title>
-  </mat-card-header>
-  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="AWS Polly Service Example"> -->
-  <mat-card-content>
-    <p> Converts the text provided by user into audio which can be downloaded as mp3 file. <br>
-    <span> <i> Tech Stack:</i></span> AngularJS, API Gateway, Amazon Polly, S3 bucket, Lambda functions, DynamoDB & SNS service. </p>
-  </mat-card-content>
-  <mat-card-actions align="center">
-    <nav>
-      <a routerLink="/pollydemo">
-    <button mat-raised-button color="primary">Demo</button>
-  </a>
-  <a href="#">
-      <button mat-raised-button color="primary">Reset</button>
-    </a>
- </nav>
-  
-  </mat-card-actions>
-</mat-card>
 </body>
-<router-outlet></router-outlet>
+
+
 
 

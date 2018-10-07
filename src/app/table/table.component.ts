@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { PollyService } from '../polly.service';
-import { PollyDemoComponent } from '../polly-demo/polly-demo.component';
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -9,11 +8,10 @@ import { PollyDemoComponent } from '../polly-demo/polly-demo.component';
 export class TableComponent implements OnInit {
   public columns: string[];
   @Input() posts = [];
-  constructor(private _pollyService: PollyService, private _pollyDemo: PollyDemoComponent) { }
+  constructor(private _pollyService: PollyService) { }
 
   ngOnInit() {
-  //   this._pollyService.getData()
-  //     .subscribe(data => this.posts = data);
+  // get the table headers.
   this.columns = this._pollyService.getColumns();
   }
 }
