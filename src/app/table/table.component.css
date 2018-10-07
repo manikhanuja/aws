@@ -2,7 +2,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
-    border: 1px solid #ddd;
+    border: 1px solid var(--white);
 }
 
 th, td {
@@ -16,9 +16,11 @@ td{
     font-size: 12px;
 }
 
-tr:nth-child(even){background-color: #f2f2f2}
+tr:nth-child(even){
+    background-color: var(--darkblue);
+    color: var(--white);
+}
 
 div {
-    margin-left: 5%;
     margin-top: 2%;
 }

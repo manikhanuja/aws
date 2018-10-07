@@ -1,23 +1,24 @@
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-<div>
-        <label>Select Voice: 
+
+<div class="container-fluid bg-3">
+    <h3 class="text-center">Text to Speech Conversion Application</h3><br>
+        <label>Select Voice:</label>
             <select placeholder="Voice" #voicekey>
                 <option>None</option>
                 <option *ngFor="let voice of voices" [value]="voice.voicekey">{{voice.voice}}</option>
               </select>
-            </label>
-        <span id="postIDreturned"></span>
-        <button mat-flat-button color="primary" (click)="save(voicekey.value, postText.value)">Say it!</button>  
-        <label>{{ message }}</label>    
+        <button  class="margin-left" (click)="save(voicekey.value, postText.value)">Say it!</button> 
+        <label class="margin-left">{{ message }}</label>    
+<div>
+    <textarea  placeholder="Enter Text" #postText></textarea>
 </div>
 
 <div>
-<textarea matInput placeholder="Enter Text" #postText></textarea>
-</div>
-
-<div>
-<input matInput placeholder="Enter Post Id to Search" #postId> 
-<button mat-button color="primary" (click)="search(postId.value)" id="searchButton"><i class="fa fa-fw fa-search"></i></button> 
+    <input type="text"  placeholder="Enter Post Id to Search" #postId> 
+    <button class="margin-left" (click)="search(postId.value)">
+        <span class="glyphicon glyphicon-search"></span> Search
+    </button>
 </div>
 <!--Table--><!--[post] property is to pass posts from parent component to child component-->
 <app-table [posts]="posts"> </app-table>
+</div>
